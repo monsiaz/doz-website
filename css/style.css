@@ -316,8 +316,9 @@ footer a:hover { opacity: 0.7; }
     transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.js-ready .fade-in-up { opacity: 0; transform: translateY(60px) scale(0.95); }
-.js-ready .fade-in-up.visible { opacity: 1; transform: translateY(0) scale(1); }
+/* Désactivation du masquage initial pour éviter les pages vides si le JS ne s’exécute pas */
+/* .js-ready .fade-in-up { opacity: 0; transform: translateY(60px) scale(0.95); } */
+/* .js-ready .fade-in-up.visible { opacity: 1; transform: translateY(0) scale(1); } */
 
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
