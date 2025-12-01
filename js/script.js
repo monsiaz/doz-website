@@ -121,3 +121,25 @@ document.addEventListener('DOMContentLoaded', function() {
             cursor.style.border = '1px solid var(--doz-noir)';
         });
     });
+
+    // 7. Page Transition
+    const curtain = document.querySelector('.page-curtain');
+    const linksToAnimate = document.querySelectorAll('a:not([target="_blank"]):not([href^="#"])');
+
+    linksToAnimate.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = link.getAttribute('href');
+            
+            if(curtain) {
+                curtain.classList.add('active');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 600); // Wait for animation
+            } else {
+                window.location.href = href;
+            }
+        });
+    });
+    
+    // Reveal curtain on load (optional, handled by default browser paint, but we can reverse it)
