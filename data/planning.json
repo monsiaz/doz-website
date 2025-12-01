@@ -1,0 +1,17 @@
+{
+  "monday": [
+    {"time": "07:15", "course": "LAGREE ESSENTIEL"},
+    {"time": "08:15", "course": "LAGREE ESSENTIEL"},
+    {"time": "12:30", "course": "LAGREE ESSENTIEL"},
+    {"time": "17:15", "course": "LAGREE ESSENTIEL"},
+    {"time": "18:15", "course": "LAGREE ESSENTIEL"}
+  ],
+  "tuesday": [
+    {"time": "07:30", "course": "BOOTY & CORE"},
+    {"time": "08:30", "course": "LAGREE ESSENTIEL"},
+    {"time": "12:30", "course": "LAGREE FUSION"},
+    {"time": "18:15", "course": "LAGREE FUSION"},
+    {"time": "19:15", "course": "LAGREE ESSENTIEL"}
+  ]
+  // ... autres jours à compléter via le CMS
+}

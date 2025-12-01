@@ -1,0 +1,21 @@
+{
+  "dishes": [
+    {
+      "name": "Butternut Pita",
+      "desc": "Pain pita maison, écrasé de courge à la tahini, crumble de parmesan au noix, graines de courge, pickles, patates douces rôties."
+    },
+    {
+      "name": "Avocado Toast",
+      "desc": "Ecrasé d’avocat assaisonné, pain au levain, fêta, grenade, graines torréfiées, patates douces rôties.",
+      "options": ["Poulet mariné", "Gravlax Truite", "Halloumi Rôti"]
+    },
+    {
+      "name": "Bowl du Moment",
+      "desc": "Riz noir vénéré, carottes rôties, poêlée champignons et fenouil, fêta, granola salé, pickles."
+    },
+    {
+      "name": "Grilled Cheese",
+      "desc": "Pain de mie, jambon blanc, cheddar, mozzarella et salade fraîcheur."
+    }
+  ]
+}

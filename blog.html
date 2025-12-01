@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Blog DOZ - Expert Lagree</title>
+    <meta name="description" content="Tout savoir sur la méthode Lagree : bienfaits, technique, conseils. Le blog expert de DOZ Anglet.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-beige js-ready bg-watermark-container">
+
+    <!-- Filigranes (Sitewide) -->
+    <img src="assets/img/perso/bonhomme_lagree.png" alt="" class="bg-watermark-icon wm-top-right wm-dark" style="top: 5%; right: -5%; width: 300px;">
+    <img src="assets/img/perso/sam_noir.png" alt="" class="bg-watermark-icon wm-center-left wm-dark" style="top: 40%; left: -8%; width: 250px; opacity: 0.15;">
+    <img src="assets/img/perso/bonhomme_coffee.png" alt="" class="bg-watermark-icon wm-bottom-left img-invert-dark" style="bottom: 5%; left: -2%; width: 200px; opacity: 0.15;">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-doz">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+                <img src="assets/img/logo/principal_noir.png" alt="DOZ" height="40">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item mx-3"><a class="nav-link" href="coffee.html">COFFEE</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="lagree.html">LAGREE</a></li>
+                    <li class="nav-item mx-5 d-none d-lg-block">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/img/logo/principal_noir.png" alt="DOZ" height="50">
+                        </a>
+                    </li>
+                    <li class="nav-item mx-3"><a class="nav-link active fw-bold" href="blog.html">LE BLOG</a></li>
+                    <li class="nav-item mx-3 d-lg-none mt-3">
+                         <a href="https://member-app.deciplus.pro/doz-instantbrut/shop" target="_blank" class="btn btn-dark w-100 rounded-pill">RÉSERVER</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="d-none d-lg-block position-absolute end-0 pe-4">
+                 <a href="https://member-app.deciplus.pro/doz-instantbrut/shop" target="_blank" class="btn btn-outline-dark rounded-pill btn-resa-nav">RÉSERVER</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Blog -->
+    <header class="pt-5 mt-5 text-center container section-padding fade-in-up position-relative z-index-1">
+        <span class="text-doz-vert fw-bold text-uppercase tracking-wide small mb-3 d-block">Expertise & Passion</span>
+        <h1 class="display-1 fw-bold text-uppercase mb-4">Le Blog<br>Lagree</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 600px;">Plongez dans l'univers de la méthode Lagree. Conseils techniques, bienfaits santé et lifestyle sportif.</p>
+    </header>
+
+    <!-- Featured Article -->
+    <section class="pb-5 position-relative z-index-1">
+        <div class="container">
+            <div class="row align-items-center g-5 fade-in-up delay-100">
+                <div class="col-lg-7">
+                    <a href="blog/articles_html/5-bienfaits-lagree-posture.html" class="d-block position-relative overflow-hidden rounded-4 shadow-lg group">
+                        <img src="blog/articles_html/images/5-bienfaits-lagree-posture.jpg" class="img-fluid w-100 object-fit-cover transition-transform duration-700 group-hover:scale-105" style="height: 500px;" alt="Lagree Posture">
+                        <div class="position-absolute top-0 end-0 p-3">
+                            <span class="badge bg-white text-dark shadow-sm px-3 py-2">À LA UNE</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-5">
+                    <span class="text-uppercase text-doz-vert fw-bold small mb-2 d-block tracking-wide">BIEN-ÊTRE</span>
+                    <h2 class="display-4 fw-bold mb-3"><a href="blog/articles_html/5-bienfaits-lagree-posture.html" class="text-dark text-decoration-none hover-opacity-75 transition-all">Les 5 bienfaits du Lagree sur votre posture</a></h2>
+                    <p class="lead text-muted mb-4">Mal de dos ? Découvrez comment le Lagree renforce vos muscles profonds pour vous redresser durablement.</p>
+                    <a href="blog/articles_html/5-bienfaits-lagree-posture.html" class="btn btn-outline-dark rounded-pill px-4">Lire l'article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="py-5 position-relative z-index-1">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-5 border-bottom border-dark border-opacity-10 pb-3">
+                <h3 class="h2 fw-bold text-uppercase mb-0">Derniers Articles</h3>
+                <div class="d-none d-md-block text-muted small">Explorer par thèmes</div>
+            </div>
+
+            <div class="row g-5">
+                
+                <!-- Article 1 -->
+                <div class="col-md-4 fade-in-up">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/lagree-pour-hommes-brisez-les-idees-recues.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/lagree-pour-hommes-brisez-les-idees-recues.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Lagree Hommes">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">PUBLIC</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/lagree-pour-hommes-brisez-les-idees-recues.html" class="text-dark text-decoration-none">Le Lagree, c'est aussi pour les hommes</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/lagree-pour-hommes-brisez-les-idees-recues.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="col-md-4 fade-in-up delay-100">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/combien-seances-lagree-par-semaine-resultats.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/combien-seances-lagree-par-semaine-resultats.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Fréquence Lagree">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">CONSEILS</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/combien-seances-lagree-par-semaine-resultats.html" class="text-dark text-decoration-none">Combien de séances par semaine ?</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/combien-seances-lagree-par-semaine-resultats.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="col-md-4 fade-in-up delay-200">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/recuperer-apres-seance-lagree-intense.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/recuperer-apres-seance-lagree-intense.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Récupération">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">SANTÉ</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/recuperer-apres-seance-lagree-intense.html" class="text-dark text-decoration-none">Bien récupérer après une séance</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/recuperer-apres-seance-lagree-intense.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="col-md-4 fade-in-up">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/comment-lagree-ameliore-performances-surf.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/comment-lagree-ameliore-performances-surf.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Lagree Surf">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">PERFORMANCE</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/comment-lagree-ameliore-performances-surf.html" class="text-dark text-decoration-none">Lagree & Surf : le combo parfait</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/comment-lagree-ameliore-performances-surf.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="col-md-4 fade-in-up delay-100">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/lagree-shake-muscles-tremblants-benefiques.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/lagree-shake-muscles-tremblants-benefiques.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Lagree Shake">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">SCIENCE</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/lagree-shake-muscles-tremblants-benefiques.html" class="text-dark text-decoration-none">Pourquoi vos muscles tremblent-ils ?</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/lagree-shake-muscles-tremblants-benefiques.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 6 -->
+                <div class="col-md-4 fade-in-up delay-200">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/megapro-vs-reformer-pilates-differences.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/megapro-vs-reformer-pilates-differences.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="MegaPro vs Pilates">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">MÉTHODE</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/megapro-vs-reformer-pilates-differences.html" class="text-dark text-decoration-none">MegaPro vs Pilates : le match</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/megapro-vs-reformer-pilates-differences.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 7 -->
+                <div class="col-md-4 fade-in-up">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/lagree-vs-crossfit-match-intensite.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/lagree-vs-crossfit-match-intensite.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Lagree vs Crossfit">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">COMPARATIF</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/lagree-vs-crossfit-match-intensite.html" class="text-dark text-decoration-none">Lagree vs Crossfit : l'intensité comparée</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/lagree-vs-crossfit-match-intensite.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 8 -->
+                <div class="col-md-4 fade-in-up delay-100">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/lagree-prenatal-pratiquer-enceinte.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/lagree-prenatal-pratiquer-enceinte.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Lagree Enceinte">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">SANTÉ</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/lagree-prenatal-pratiquer-enceinte.html" class="text-dark text-decoration-none">Peut-on pratiquer enceinte ?</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/lagree-prenatal-pratiquer-enceinte.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 9 -->
+                <div class="col-md-4 fade-in-up delay-200">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/importance-lenteur-comprendre-tempo-4.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/importance-lenteur-comprendre-tempo-4.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Tempo Lagree">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">TECHNIQUE</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/importance-lenteur-comprendre-tempo-4.html" class="text-dark text-decoration-none">Le secret du Tempo 4</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/importance-lenteur-comprendre-tempo-4.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 10 -->
+                <div class="col-md-4 fade-in-up">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/role-ressorts-megapro-fitness.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/role-ressorts-megapro-fitness.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Ressorts MegaPro">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">TECHNIQUE</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/role-ressorts-megapro-fitness.html" class="text-dark text-decoration-none">Tout comprendre aux ressorts</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/role-ressorts-megapro-fitness.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 11 -->
+                <div class="col-md-4 fade-in-up delay-100">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/methode-lagree-perte-de-poids-doz.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/methode-lagree-perte-de-poids-doz.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Perte de Poids">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">SANTÉ</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/methode-lagree-perte-de-poids-doz.html" class="text-dark text-decoration-none">Lagree et perte de poids</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/methode-lagree-perte-de-poids-doz.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Article 12 -->
+                <div class="col-md-4 fade-in-up delay-200">
+                    <article class="h-100 d-flex flex-column bg-white p-3 rounded-4 shadow-sm hover-card transition-all">
+                        <a href="blog/articles_html/preparer-seance-lagree-doz-anglet.html" class="d-block mb-4 overflow-hidden rounded-3 position-relative">
+                            <img src="blog/articles_html/images/preparer-seance-lagree-doz-anglet.jpg" class="img-fluid w-100 object-fit-cover hover-scale" style="height: 220px;" alt="Première Séance">
+                        </a>
+                        <div class="flex-grow-1 px-2">
+                            <span class="text-uppercase text-doz-vert fw-bold x-small mb-2 d-block">DÉBUTANTS</span>
+                            <h3 class="h4 fw-bold mb-3"><a href="blog/articles_html/preparer-seance-lagree-doz-anglet.html" class="text-dark text-decoration-none">Préparer sa première séance</a></h3>
+                        </div>
+                        <div class="px-2 mt-3 pt-3 border-top border-light">
+                            <a href="blog/articles_html/preparer-seance-lagree-doz-anglet.html" class="text-dark fw-bold text-decoration-none small text-uppercase d-flex align-items-center">Lire la suite <i class="fas fa-arrow-right ms-auto opacity-50"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-5 border-top border-secondary border-opacity-25">
+        <div class="container text-center">
+            <img src="assets/img/logo/principal_blanc.png" alt="DOZ" height="60" class="mb-4 opacity-75 hover-opacity-100 transition-all">
+            <p class="mb-4 text-white-50">2 Avenue de la Butte aux Cailles, Bâtiment Pasaia, 64600 Anglet</p>
+            <div class="socials mb-4">
+                <a href="https://www.instagram.com/doz.instantbrut/" target="_blank" class="text-white mx-3 fs-4 hover-scale" aria-label="Suivre Doz sur Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="mb-3">
+                <a href="mentions-legales.html" class="text-white-50 text-decoration-none small mx-2 hover-text-white">Mentions Légales</a>
+            </div>
+             <p class="small text-white-50">&copy; 2024 Doz Instant Brut</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

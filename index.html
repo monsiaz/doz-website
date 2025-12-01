@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOZ Anglet | Coffee Shop & Studio Lagree</title>
+    <meta name="description" content="DOZ : Le lieu hybride à Anglet. Coffee Shop gourmand & Studio Lagree. Food, Sport & Chill au Pays Basque.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="js-ready">
+
+    <!-- Navbar Home -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-doz">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand mx-auto d-lg-none" href="#">
+                <img src="assets/img/logo/principal_noir.png" alt="DOZ" height="40">
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item mx-3"><a class="nav-link" href="coffee.html">COFFEE</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="coffee.html#menu">MENU</a></li>
+                    
+                    <li class="nav-item mx-5 d-none d-lg-block">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logo/principal_noir.png" alt="DOZ" height="50">
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item mx-3"><a class="nav-link" href="lagree.html">LAGREE</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="blog.html">LE JOURNAL</a></li>
+                    <li class="nav-item mx-3 d-lg-none mt-3">
+                         <a href="https://member-app.deciplus.pro/doz-instantbrut/shop" target="_blank" class="btn btn-dark w-100 rounded-pill">RÉSERVER</a>
+                    </li>
+                </ul>
+            </div>
+             <div class="d-none d-lg-block position-absolute end-0 pe-4">
+                 <a href="https://member-app.deciplus.pro/doz-instantbrut/shop" target="_blank" class="btn btn-outline-dark rounded-pill btn-resa-nav">RÉSERVER</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="position-relative w-100 vh-100 d-flex flex-column flex-lg-row">
+        <a href="coffee.html" class="hero-split hero-coffee d-flex align-items-center justify-content-center text-decoration-none group">
+            <div class="text-center hero-content position-relative">
+                <img src="assets/img/perso/café_noir.png" alt="Coffee" class="hero-icon mb-4 floating-anim" width="120">
+                <h1 class="display-2 fw-bold text-uppercase tracking-tight mb-3">Coffee<br>Shop</h1>
+                <span class="btn btn-outline-dark rounded-pill px-4 mt-3 group-hover:bg-dark group-hover:text-white transition-all">Découvrir</span>
+            </div>
+        </a>
+
+        <a href="lagree.html" class="hero-split hero-lagree d-flex align-items-center justify-content-center text-decoration-none group">
+            <div class="text-center hero-content position-relative text-white">
+                <img src="assets/img/logo/icone_blanc.png" alt="Lagree" class="hero-icon mb-4 floating-anim-delay" width="120">
+                <h1 class="display-2 fw-bold text-uppercase tracking-tight mb-3">Studio<br>Lagree</h1>
+                <span class="btn btn-outline-light rounded-pill px-4 mt-3">S'entraîner</span>
+            </div>
+        </a>
+        
+        <div class="position-absolute top-50 start-50 translate-middle d-none d-lg-block z-index-top pointer-events-none">
+             <img src="assets/img/logo/pastille_blanc.png" alt="Doz" height="100" class="spin-anim">
+        </div>
+    </section>
+
+    <!-- Concept / Manifeste -->
+    <section class="py-5 section-padding bg-white bg-watermark-container position-relative">
+        <!-- Personnages Intelligents -->
+        <!-- Olga (Noir) arrive par la gauche -->
+        <img src="assets/img/perso/Olga_noir.png" class="character-float pos-top-left char-enter-left char-float" alt="" style="width: 180px; opacity: 0.8;">
+        <!-- Eli (Vert) arrive par la droite pour rappeler le Lagree -->
+        <img src="assets/img/perso/eli_vert.png" class="character-float pos-center-right char-enter-right char-float" alt="" style="width: 220px; opacity: 0.9;">
+
+        <div class="container position-relative z-index-1">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 fade-in-up">
+                    <span class="text-doz-vert fw-bold text-uppercase tracking-wide small mb-2 d-block">L'Esprit du Lieu</span>
+                    <h2 class="display-3 fw-bold text-uppercase mb-4">Instant<br>Brut.</h2>
+                    <p class="lead mb-4 text-dark">DOZ n'est pas qu'une salle de sport, ni juste un café. C'est un équilibre.</p>
+                    <p class="text-muted">Né de l'envie de réunir deux passions sous un même toit à Anglet, DOZ est un lieu hybride où l'intensité de l'effort rencontre le réconfort d'une assiette saine. D'un côté, le premier studio Lagree du Pays Basque pour sculpter votre corps. De l'autre, une cuisine locale, colorée et faite maison.</p>
+                    <p class="fw-bold mb-0">Venez pour transpirer, restez pour savourer.</p>
+                </div>
+                <div class="col-lg-7 fade-in-up delay-100">
+                    <!-- Collage Dynamique -->
+                    <div class="collage-container d-none d-md-block" style="height: 600px;">
+                        <img src="assets/img/gallery/1.jpg" class="collage-img c-img-1" alt="Ambiance Coffee" style="width: 55%; height: 65%;">
+                        <img src="assets/img/gallery/lagree_1.jpg" class="collage-img c-img-2" alt="Machine Lagree" style="width: 55%; height: 55%;">
+                        <img src="assets/img/gallery/3.jpg" class="collage-img c-img-3" alt="Plat Healthy" style="width: 35%; height: 35%; top: 40%; right: 45%;">
+                    </div>
+                    <!-- Version Mobile -->
+                    <div class="d-md-none text-center">
+                        <img src="assets/img/gallery/1.jpg" class="img-fluid rounded-4 shadow mb-3" alt="Ambiance">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aperçu Planning (Lagree) -->
+    <section class="py-5 section-padding bg-doz-vert text-white position-relative overflow-hidden">
+        <!-- Sam Blanc qui sort du bas -->
+        <img src="assets/img/perso/sam_blanc.png" class="character-float pos-bottom-right char-enter-right" alt="" style="bottom: 0; right: 5%; width: 250px; opacity: 0.2; transform-origin: bottom right;">
+        
+        <!-- Élément graphique de fond (Corrigé z-index) -->
+        <div class="position-absolute top-0 end-0 p-5 pe-none" style="z-index: 0; opacity: 0.05;">
+            <img src="assets/img/logo/icone_blanc.png" width="300" alt="Bg Icon">
+        </div>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-end mb-5 fade-in-up">
+                <div>
+                    <span class="badge bg-white text-dark mb-3">AU STUDIO</span>
+                    <h2 class="display-4 fw-bold text-uppercase mb-0">Votre Semaine<br>Lagree</h2>
+                </div>
+                <div class="mt-4 mt-md-0">
+                    <p class="text-white-50 mb-3 text-md-end" style="max-width: 400px;">Des cours collectifs de 45 minutes sur MegaPro, encadrés par nos coachs certifiés. Intensité garantie.</p>
+                    <a href="lagree.html" class="btn btn-outline-light rounded-pill px-4">Découvrir le Studio</a>
+                </div>
+            </div>
+
+            <div class="row g-4 fade-in-up delay-100">
+                <div class="col-md-4">
+                    <div class="p-4 border border-light border-opacity-25 rounded-4 h-100 d-flex flex-column bg-white bg-opacity-10 hover-card backdrop-blur">
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-doz-lavande rounded-circle" style="width: 10px; height: 10px;"></div>
+                                <span class="fw-bold text-uppercase tracking-wide small">Signature</span>
+                            </div>
+                            <span class="text-white-50 small">Tous les jours</span>
+                        </div>
+                        <h3 class="h3 mb-2">ESSENTIEL</h3>
+                        <p class="text-white-50 mb-4 flex-grow-1">Le cours fondamental. Full body, lent, contrôlé. Idéal pour construire des bases solides et se dépasser.</p>
+                        <div class="d-flex align-items-center justify-content-between border-top border-light border-opacity-25 pt-3 mt-auto">
+                            <span class="fw-bold">45 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border border-light border-opacity-25 rounded-4 h-100 d-flex flex-column bg-white bg-opacity-10 hover-card backdrop-blur">
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-white rounded-circle" style="width: 10px; height: 10px;"></div>
+                                <span class="fw-bold text-uppercase tracking-wide small">Focus</span>
+                            </div>
+                            <span class="text-white-50 small">Mar & Ven</span>
+                        </div>
+                        <h3 class="h3 mb-2">BOOTY & CORE</h3>
+                        <p class="text-white-50 mb-4 flex-grow-1">Ciblage intense fessiers et sangle abdominale. Ça brûle là où il faut.</p>
+                        <div class="d-flex align-items-center justify-content-between border-top border-light border-opacity-25 pt-3 mt-auto">
+                            <span class="fw-bold">45 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 border border-light border-opacity-25 rounded-4 h-100 d-flex flex-column bg-white bg-opacity-10 hover-card backdrop-blur">
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="bg-warning rounded-circle" style="width: 10px; height: 10px;"></div>
+                                <span class="fw-bold text-uppercase tracking-wide small">Challenge</span>
+                            </div>
+                            <span class="text-white-50 small">Mercredi</span>
+                        </div>
+                        <h3 class="h3 mb-2">FUSION</h3>
+                        <p class="text-white-50 mb-4 flex-grow-1">Le combo ultime : 25 min de Lagree + 20 min de Renfo/Cardio avec charges.</p>
+                        <div class="d-flex align-items-center justify-content-between border-top border-light border-opacity-25 pt-3 mt-auto">
+                            <span class="fw-bold">45 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                 <a href="lagree.html#planning" class="btn btn-light rounded-pill px-5 py-3 fw-bold hover-scale">VOIR LE PLANNING COMPLET</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aperçu Menu (Coffee) -->
+    <section class="py-5 section-padding bg-beige position-relative overflow-hidden">
+        <!-- Iban Lavande pour une touche de couleur douce -->
+        <img src="assets/img/perso/iban_lavande.png" class="character-float pos-top-left char-float" alt="" style="top: 10%; left: -5%; width: 300px; opacity: 0.15; animation-delay: 2s;">
+
+        <div class="container position-relative z-index-1">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 order-lg-2 fade-in-up">
+                    <span class="text-doz-vert fw-bold text-uppercase tracking-wide small mb-2 d-block">Côté Cuisine</span>
+                    <h2 class="display-3 fw-bold text-uppercase mb-4">Frais &<br>Fait Maison</h2>
+                    <p class="mb-4 text-muted">Notre chef élabore chaque jour des recettes équilibrées qui ne sacrifient rien à la gourmandise. Produits locaux, café de spécialité et pâtisseries à tomber.</p>
+                    
+                    <div class="d-flex flex-column gap-3 mb-4">
+                        <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 shadow-sm border border-light">
+                            <div class="bg-beige p-2 rounded-circle"><i class="fas fa-leaf text-doz-vert"></i></div>
+                            <div>
+                                <strong class="d-block text-uppercase">Sain & Local</strong>
+                                <small class="text-muted">Ingrédients sourcés avec soin</small>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3 p-3 bg-white rounded-3 shadow-sm border border-light">
+                            <div class="bg-beige p-2 rounded-circle"><i class="fas fa-coffee text-doz-vert"></i></div>
+                            <div>
+                                <strong class="d-block text-uppercase">Specialty Coffee</strong>
+                                <small class="text-muted">Torréfaction artisanale</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="coffee.html" class="btn btn-dark rounded-pill px-4 py-3 mt-2 hover-scale">Découvrir la Carte</a>
+                </div>
+                <div class="col-lg-7 order-lg-1 fade-in-up delay-100">
+                    <div class="position-relative p-3">
+                        <!-- Image principale (Locale) -->
+                        <img src="assets/img/gallery/7.jpg" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 600px;" alt="Menu Doz">
+                        
+                        <!-- Encart Flottant -->
+                        <div class="position-absolute bottom-0 end-0 p-5 d-none d-md-block">
+                            <div class="bg-white p-4 rounded-4 shadow-lg text-center rotate-1 border border-dark" style="max-width: 250px;">
+                                <span class="badge bg-doz-vert text-white mb-2">L'ÉVÉNEMENT</span>
+                                <strong class="d-block h4 mb-1">BRUNCH</strong>
+                                <p class="small text-muted mb-0">Tous les Samedis<br>9h30 - 14h00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Instagram Embed -->
+    <section class="py-5 bg-black overflow-hidden">
+        <div class="container">
+            <div class="text-center mb-5 fade-in-up">
+                <h2 class="h4 text-white mb-2">SUIVEZ-NOUS SUR INSTAGRAM</h2>
+                <a href="https://www.instagram.com/doz.instantbrut/" target="_blank" class="text-white-50 text-decoration-none link-hover-white">@doz.instantbrut</a>
+            </div>
+            
+            <div class="row justify-content-center g-4 fade-in-up delay-100">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DQ8txmTgBpJ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote> 
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/DNPx4u6IZte/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-5 border-top border-secondary border-opacity-25">
+        <div class="container text-center">
+            <img src="assets/img/logo/principal_blanc.png" alt="DOZ Logo Footer" height="60" class="mb-4 opacity-75 hover-opacity-100 transition-all">
+            <p class="mb-4 text-white-50">2 Avenue de la Butte aux Cailles, Bâtiment Pasaia, 64600 Anglet</p>
+            <div class="socials mb-4">
+                <a href="https://www.instagram.com/doz_instantbrut" target="_blank" class="text-white mx-3 fs-4 hover-scale" aria-label="Suivre Doz sur Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="mb-3">
+                <a href="mentions-legales.html" class="text-white-50 text-decoration-none small mx-2 hover-text-white">Mentions Légales</a>
+            </div>
+             <p class="small text-white-50">&copy; 2024 Doz Instant Brut</p>
+        </div>
+    </footer>
+
+    <script async src="//www.instagram.com/embed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

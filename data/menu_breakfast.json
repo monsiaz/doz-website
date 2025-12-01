@@ -1,0 +1,14 @@
+{
+  "salty": [
+    {"name": "Petit déj’ Doz", "desc": "Oeuf à la coque, fromage, beurre, pain au levain"},
+    {"name": "Granola Bowl", "desc": "Fromage blanc, granola maison, fruits frais"},
+    {"name": "Grilled Cheese", "desc": "Pain de mie, jambon blanc, cheddar et mozzarella"}
+  ],
+  "sweet": [
+    {"name": "Banana Bread"},
+    {"name": "Cookies"},
+    {"name": "Carrot Cake"},
+    {"name": "Marbré"},
+    {"name": "Pâtisserie du moment"}
+  ]
+}
