@@ -343,6 +343,28 @@ footer a:hover { opacity: 0.7; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
 
+/* Reveal from right (pour les médias / blocs) */
+.reveal-right {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes slideInRightDoz {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.reveal-right.visible {
+    animation: slideInRightDoz 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
 /* Utility Buttons */
 .btn-circle {
     display: inline-flex; align-items: center; justify-content: center; width: 50px; height: 50px;
@@ -388,6 +410,33 @@ footer a:hover { opacity: 0.7; }
         transform: none !important;
     } 
     .pos-center-right { display: none; } 
+}
+
+/* --- Side Character global --- */
+.side-character {
+    position: fixed;
+    right: 3%;
+    bottom: 10%;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.side-character-img {
+    width: 70px;
+    object-fit: contain;
+    animation: subtle-float 6s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .side-character {
+        right: 4%;
+        bottom: 6%;
+    }
+    .side-character-img {
+        width: 48px;
+        opacity: 0.45;
+        animation: none;
+    }
 }
 
 /* --- MOBILE MENU OVERLAY (FIXED) --- */

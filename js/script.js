@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. Initialisation des animations
     document.body.classList.add('js-ready');
 
-    const animatedElements = document.querySelectorAll('.fade-in-up');
+    const animatedElements = document.querySelectorAll('.fade-in-up, .reveal-right');
 
     // 2. Navbar : Gestion du Menu Plein Écran Mobile
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -14,18 +14,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
 
     // Toggle Menu
-    navbarToggler.addEventListener('click', () => {
-        if (!navbarCollapse.classList.contains('show')) {
-            body.style.overflow = 'hidden'; 
-        } else {
-            body.style.overflow = ''; 
-        }
-    });
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', () => {
+            if (!navbarCollapse.classList.contains('show')) {
+                body.style.overflow = 'hidden'; 
+            } else {
+                body.style.overflow = ''; 
+            }
+        });
+    }
 
     // Fermeture au clic sur un lien
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (navbarCollapse.classList.contains('show')) {
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse);
                 bsCollapse.hide();
                 body.style.overflow = '';
@@ -35,13 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 3. Navbar Change Color on Scroll
     const navbar = document.querySelector('.navbar-doz');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
     // 4. Observer pour Animations au scroll
     const observerOptions = {
@@ -77,6 +81,57 @@ document.addEventListener('DOMContentLoaded', function() {
                 img.style.transform = `translateY(${yPos}px)`;
             });
         });
+    }
+
+    // 7. Petit personnage global (couleur qui s'adapte au fond)
+    const sideCharacter = document.querySelector('.side-character');
+    if (sideCharacter) {
+        const sideImg = sideCharacter.querySelector('.side-character-img');
+        const lightSrc = sideImg?.dataset.variantLight || sideImg?.getAttribute('src');
+        const darkSrc = sideImg?.dataset.variantDark || sideImg?.getAttribute('src');
+        const darkClasses = ['bg-black', 'bg-dark', 'bg-doz-vert'];
+        let ticking = false;
+
+        const updateTone = () => {
+            if (!sideCharacter || !sideImg) return;
+            const rect = sideCharacter.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top + rect.height / 2;
+            const target = document.elementFromPoint(cx, cy);
+            if (!target) return;
+
+            let node = target;
+            let isDark = false;
+
+            while (node && node !== document.body) {
+                if (node.classList) {
+                    if (darkClasses.some(cls => node.classList.contains(cls))) {
+                        isDark = true;
+                        break;
+                    }
+                }
+                node = node.parentElement;
+            }
+
+            if (isDark && darkSrc && sideImg.getAttribute('src') !== darkSrc) {
+                sideImg.setAttribute('src', darkSrc);
+            } else if (!isDark && lightSrc && sideImg.getAttribute('src') !== lightSrc) {
+                sideImg.setAttribute('src', lightSrc);
+            }
+        };
+
+        const requestToneUpdate = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    updateTone();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        ['scroll', 'resize'].forEach(evt => window.addEventListener(evt, requestToneUpdate));
+        updateTone();
     }
 
     // 6. Footer Quotes Slider (Lagree Citations)
