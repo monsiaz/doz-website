@@ -2,9 +2,26 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // 0. Smooth Scroll (Lenis) - Effet "Léché"
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
     // 1. Initialisation des animations
-    // On ajoute une classe au body pour signaler que le JS est prêt
-    // Cela active le CSS qui cache les éléments .fade-in-up initialement
     document.body.classList.add('js-ready');
 
     const animatedElements = document.querySelectorAll('.fade-in-up');
@@ -17,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle Menu
     navbarToggler.addEventListener('click', () => {
-        // On toggle la classe show gérée par Bootstrap mais stylisée par nous
-        // Bootstrap le fait auto, mais on peut ajouter une classe "menu-open" au body pour bloquer le scroll
         if (!navbarCollapse.classList.contains('show')) {
-            body.style.overflow = 'hidden'; // Bloque le scroll
+            body.style.overflow = 'hidden'; 
+            lenis.stop(); // Bloque le scroll Lenis
         } else {
-            body.style.overflow = ''; // Débloque
+            body.style.overflow = ''; 
+            lenis.start(); // Reprend le scroll Lenis
         }
     });
 
@@ -33,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse);
                 bsCollapse.hide();
                 body.style.overflow = '';
+                lenis.start();
             }
         });
     });
@@ -51,14 +69,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Déclenche un peu plus tard pour éviter l'effet "déjà là"
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Petit délai aléatoire si plusieurs éléments apparaissent en même temps
-                // Mais on gère déjà ça avec CSS delay, donc on ajoute juste la classe
                 entry.target.classList.add('visible');
                 observer.unobserve(entry.target); 
             }
@@ -69,4 +85,39 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
+    // 5. Parallaxe simple sur les images (Effet "Moderne")
+    const parallaxImages = document.querySelectorAll('.parallax-img');
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        parallaxImages.forEach(img => {
+            const speed = img.dataset.speed || 0.1;
+            const yPos = -(scrolled * speed);
+            img.style.transform = `translateY(${yPos}px)`;
+        });
+    });
+
 });
+
+    // 6. Custom Cursor
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    const links = document.querySelectorAll('a, button, .hover-card');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
+            cursor.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            cursor.style.border = 'none';
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursor.style.backgroundColor = 'transparent';
+            cursor.style.border = '1px solid var(--doz-noir)';
+        });
+    });
