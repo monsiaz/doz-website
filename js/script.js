@@ -2,25 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // 0. Smooth Scroll (Lenis) - Effet "Léché"
-    const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        direction: 'vertical',
-        gestureDirection: 'vertical',
-        smooth: true,
-        mouseMultiplier: 1,
-        smoothTouch: false,
-        touchMultiplier: 2,
-    });
-
-    function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
     // 1. Initialisation des animations
     document.body.classList.add('js-ready');
 
@@ -36,10 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     navbarToggler.addEventListener('click', () => {
         if (!navbarCollapse.classList.contains('show')) {
             body.style.overflow = 'hidden'; 
-            lenis.stop(); // Bloque le scroll Lenis
         } else {
             body.style.overflow = ''; 
-            lenis.start(); // Reprend le scroll Lenis
         }
     });
 
@@ -50,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse);
                 bsCollapse.hide();
                 body.style.overflow = '';
-                lenis.start();
             }
         });
     });
@@ -96,9 +74,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // 6. Footer Quotes Slider (Lagree Citations)
+    const footerQuotes = document.querySelectorAll('.footer-quote');
+    if (footerQuotes.length > 1) {
+        let currentQuote = 0;
+        footerQuotes[currentQuote].classList.add('is-active');
+
+        setInterval(() => {
+            footerQuotes[currentQuote].classList.remove('is-active');
+            currentQuote = (currentQuote + 1) % footerQuotes.length;
+            footerQuotes[currentQuote].classList.add('is-active');
+        }, 5000);
+    }
+
 });
 
-    // 6. Custom Cursor
+    // 7. Custom Cursor
     const cursor = document.createElement('div');
     cursor.classList.add('custom-cursor');
     document.body.appendChild(cursor);
@@ -122,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 7. Page Transition
+    // 8. Page Transition
     const curtain = document.querySelector('.page-curtain');
     const linksToAnimate = document.querySelectorAll('a:not([target="_blank"]):not([href^="#"])');
 
