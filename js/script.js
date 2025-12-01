@@ -83,57 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 7. Petit personnage global (couleur qui s'adapte au fond)
-    const sideCharacter = document.querySelector('.side-character');
-    if (sideCharacter) {
-        const sideImg = sideCharacter.querySelector('.side-character-img');
-        const lightSrc = sideImg?.dataset.variantLight || sideImg?.getAttribute('src');
-        const darkSrc = sideImg?.dataset.variantDark || sideImg?.getAttribute('src');
-        const darkClasses = ['bg-black', 'bg-dark', 'bg-doz-vert'];
-        let ticking = false;
-
-        const updateTone = () => {
-            if (!sideCharacter || !sideImg) return;
-            const rect = sideCharacter.getBoundingClientRect();
-            const cx = rect.left + rect.width / 2;
-            const cy = rect.top + rect.height / 2;
-            const target = document.elementFromPoint(cx, cy);
-            if (!target) return;
-
-            let node = target;
-            let isDark = false;
-
-            while (node && node !== document.body) {
-                if (node.classList) {
-                    if (darkClasses.some(cls => node.classList.contains(cls))) {
-                        isDark = true;
-                        break;
-                    }
-                }
-                node = node.parentElement;
-            }
-
-            if (isDark && darkSrc && sideImg.getAttribute('src') !== darkSrc) {
-                sideImg.setAttribute('src', darkSrc);
-            } else if (!isDark && lightSrc && sideImg.getAttribute('src') !== lightSrc) {
-                sideImg.setAttribute('src', lightSrc);
-            }
-        };
-
-        const requestToneUpdate = () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    updateTone();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        };
-
-        ['scroll', 'resize'].forEach(evt => window.addEventListener(evt, requestToneUpdate));
-        updateTone();
-    }
-
     // 6. Footer Quotes Slider (Lagree Citations)
     const footerQuotes = document.querySelectorAll('.footer-quote');
     if (footerQuotes.length > 1) {
