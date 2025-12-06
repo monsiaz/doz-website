@@ -96,9 +96,79 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
+    // 7. Highlight jour courant dans le planning Lagree
+    const planningTabs = document.querySelector('#planning-tab');
+    const planningContent = document.querySelector('#planning-tabContent');
+
+    if (planningTabs && planningContent) {
+        // Mapping JS (0 = dimanche) -> IDs de nos onglets
+        const dayMap = {
+            0: 'sun',
+            1: 'mon',
+            2: 'tue',
+            3: 'wed',
+            4: 'thu',
+            5: 'fri',
+            6: 'sat'
+        };
+
+        const today = new Date().getDay();
+        const targetKey = dayMap[today] || 'mon'; // Lundi par défaut
+        const targetSelector = `#day-${targetKey}`;
+
+        const allTabButtons = planningTabs.querySelectorAll('[data-bs-toggle="pill"]');
+        const allPanes = planningContent.querySelectorAll('.tab-pane');
+
+        let targetButton = null;
+        allTabButtons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-bs-target') === targetSelector) {
+                targetButton = btn;
+            }
+        });
+
+        allPanes.forEach(pane => {
+            pane.classList.remove('show', 'active');
+        });
+
+        if (targetButton) {
+            const targetPane = planningContent.querySelector(targetSelector);
+            targetButton.classList.add('active');
+            if (targetPane) {
+                targetPane.classList.add('show', 'active');
+            }
+        }
+    }
+
+    // 8. Lazy-load vidéo Lagree (évite de charger la .mov avant d'arriver à la section)
+    const lazyVideos = document.querySelectorAll('video[data-video-src]');
+    if ('IntersectionObserver' in window && lazyVideos.length) {
+        const videoObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    if (!video.src) {
+                        video.src = video.dataset.videoSrc;
+                        video.load();
+                    }
+                    obs.unobserve(video);
+                }
+            });
+        }, { threshold: 0.25 });
+
+        lazyVideos.forEach(video => videoObserver.observe(video));
+    } else {
+        // Fallback simple : on définit la source directement
+        lazyVideos.forEach(video => {
+            if (!video.src) {
+                video.src = video.dataset.videoSrc;
+            }
+        });
+    }
+
 });
 
-    // 7. Custom Cursor (desktop uniquement)
+    // 9. Custom Cursor (desktop uniquement)
     if (window.matchMedia('(pointer: fine)').matches) {
         const cursor = document.createElement('div');
         cursor.classList.add('custom-cursor');
@@ -124,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 8. Page Transition (désactivée sur mobile ou si réduction de mouvement)
+    // 10. Page Transition (désactivée sur mobile ou si réduction de mouvement)
     const curtain = document.querySelector('.page-curtain');
     const linksToAnimate = document.querySelectorAll('a:not([target="_blank"]):not([href^="#"])');
 

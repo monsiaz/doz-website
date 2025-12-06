@@ -152,6 +152,28 @@ section.bg-watermark-container {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Bouton burger : apparence cohérente sur mobile */
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    width: 1.5rem;
+    height: 2px;
+    background-color: currentColor;
+    position: relative;
+    box-shadow: 0 6px 0 currentColor, 0 -6px 0 currentColor;
+    border-radius: 999px;
+    background-image: none !important; /* override Bootstrap */
+}
+
 .navbar-doz.scrolled {
     background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(20px);
@@ -410,7 +432,74 @@ footer a:hover { opacity: 0.7; }
         animation: none !important;
         transform: none !important;
     } 
-    .pos-center-right { display: none; } 
+    /* On masque les personnages en positions extrêmes pour éviter qu'ils chevauchent le logo sur mobile */
+    .pos-center-right,
+    .pos-top-left,
+    .pos-bottom-right { 
+        display: none; 
+    } 
+}
+
+/* --- Badges cours Lagree --- */
+.course-badge {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    font-weight: 700;
+}
+
+.course-badge--signature {
+    background: #7b6cf6;
+    color: #ffffff;
+}
+
+.course-badge--focus {
+    background: #00b894;
+    color: #ffffff;
+}
+
+.course-badge--hybride {
+    background: #f1c40f;
+    color: #111111;
+}
+
+.course-badge--warning {
+    background: #e74c3c;
+    color: #ffffff;
+}
+
+.course-badge--dozshow {
+    background: #ff8ed4;
+    color: #111111;
+}
+
+/* --- Bloc vidéo Lagree --- */
+.video-lagree-wrapper {
+    background: radial-gradient(circle at top left, rgba(200,198,227,0.25), transparent 55%);
+}
+
+.video-lagree {
+    object-fit: cover;
+    background-color: #000;
+    border-radius: 1.5rem;
+}
+
+/* --- Planning Lagree --- */
+#planning-tab .nav-link {
+    border-radius: 999px;
+    padding: 0.4rem 0.75rem;
+    color: rgba(255,255,255,0.6);
+    transition: all 0.2s ease;
+}
+
+#planning-tab .nav-link.active {
+    background: #fff;
+    color: #000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
 /* --- MOBILE MENU OVERLAY (FIXED) --- */
@@ -429,19 +518,20 @@ footer a:hover { opacity: 0.7; }
         align-items: center;
         transform: translateY(-100%);
         opacity: 0;
-        transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.5s ease;
+        /* Animation plus rapide et plus réactive sur mobile */
+        transition: transform 0.25s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.25s ease;
         display: flex !important;
         visibility: hidden;
     }
     .navbar-collapse.show { transform: translateY(0); opacity: 1; visibility: visible; }
     .navbar-nav { width: 100%; text-align: center; gap: 1.5rem; }
-    .navbar-nav .nav-link { font-size: 2rem; font-weight: 800; color: #1A1A1A !important; opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
+    .navbar-nav .nav-link { font-size: 2rem; font-weight: 800; color: #1A1A1A !important; opacity: 0; transform: translateY(10px); transition: all 0.25s ease; }
     .navbar-collapse.show .nav-link { opacity: 1; transform: translateY(0); }
-    .navbar-collapse.show .nav-item:nth-child(1) .nav-link { transition-delay: 0.1s; }
-    .navbar-collapse.show .nav-item:nth-child(2) .nav-link { transition-delay: 0.2s; }
-    .navbar-collapse.show .nav-item:nth-child(3) .nav-link { transition-delay: 0.3s; }
-    .navbar-collapse.show .nav-item:nth-child(4) .nav-link { transition-delay: 0.4s; }
-    .navbar-collapse.show .nav-item:nth-child(5) .nav-link { transition-delay: 0.5s; }
+    .navbar-collapse.show .nav-item:nth-child(1) .nav-link { transition-delay: 0.02s; }
+    .navbar-collapse.show .nav-item:nth-child(2) .nav-link { transition-delay: 0.04s; }
+    .navbar-collapse.show .nav-item:nth-child(3) .nav-link { transition-delay: 0.06s; }
+    .navbar-collapse.show .nav-item:nth-child(4) .nav-link { transition-delay: 0.08s; }
+    .navbar-collapse.show .nav-item:nth-child(5) .nav-link { transition-delay: 0.10s; }
     .navbar-toggler { z-index: 9999; border: none; }
 }
 
